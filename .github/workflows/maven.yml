@@ -25,9 +25,7 @@ jobs:
     # Analyze code with Codacy
     - name: Run Codacy Analysis CLI
       uses: codacy/codacy-analysis-cli-action@master
-      with:
-        directory: src
-        verbose: true
+      
     - name: Run Upload Codacry Report
       run: |
         export CODACY_PROJECT_TOKEN=${{ secrets.CODACY_PROJECT_TOKEN }}
