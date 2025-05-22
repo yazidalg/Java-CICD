@@ -26,7 +26,7 @@ jobs:
     - name: Run Codacy Analysis CLI
       uses: codacy/codacy-analysis-cli-action@master
       with:
-        directory: ./
+        directory: src
         verbose: true
     - name: Run Upload Codacry Report
       run: |
