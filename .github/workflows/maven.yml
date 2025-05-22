@@ -28,6 +28,10 @@ jobs:
       with:
         directory: .
         verbose: true
+    - name: Run Upload Codacry Report
+      run: |
+        export CODACY_PROJECT_TOKEN=${{ secrets.CODACY_PROJECT_TOKEN }}
+        bash <(curl -Ls https://coverage.codacy.com/get.sh)
     #analyze code with sonarcloud
     - name: Build, test, and analyze
       env:
