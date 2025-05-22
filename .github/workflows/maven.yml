@@ -22,6 +22,10 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+    # Analyze code with Codacy
+    - name: Run Codacy Analysis CLI
+        uses: codacy/codacy-analysis-cli-action@master
+    #analyze code with sonarcloud
     - name: Build, test, and analyze
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
