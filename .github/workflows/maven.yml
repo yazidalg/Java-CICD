@@ -36,5 +36,4 @@ jobs:
     - name: Build, test, and analyze
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      with:
-        projectBaseDir: .
+      run: mvn verify sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=jatihusen -Dsonar.projectKey=jatihusen_Basic-Java-Maven
